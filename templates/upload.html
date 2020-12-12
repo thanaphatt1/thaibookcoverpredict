@@ -1,0 +1,15 @@
+<!doctype html>
+<title>Upload new File</title>
+<h1>Upload the picture</h1>
+<form method=post enctype=multipart/form-data>
+    <p><input type=file name=file>
+        <input type=submit value=Upload>
+</form>
+<h3>These are categories in my model</h3>
+<h4>1.การ์ตูน 2.คอมพิวเตอร์ 3.งานอดิเรก งานฝีมือ 4.จิตวิทยา การพัฒนาตัวเอง 5.ธรรมะ ศาสนา และปรัชญา 6.นิยาย 7.นิยายแปล 8.บริหาร ธุรกิจ 9.วรรณกรรม 10.สุขภาพ ความงาม 11.หนังสือท่องเที่ยว 12.หนังสือบทความ สารคดี 13.หนังสือเด็ก 14.หนังสือเตรียมสอบ แนวข้อสอบ'</h4>
+{% if filename %}
+<h2><br>{{label}} </h2>
+<div>
+    <img src="{{ url_for('static', filename = filename) }}">
+</div>
+{% endif %}
